@@ -13,5 +13,5 @@ import {Component} from '@angular/core';
   styles: [``],
 })
 export class AppComponent {
-  title = 'Turo1 of Heroes';
+  title = 'Turo of Heroes';
 }

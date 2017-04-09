@@ -1,12 +1,11 @@
 /**
  * Created by Shelly on 2017-4-9.
  */
-
 import {Component, OnInit} from '@angular/core';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
+
 @Component({
-  moduleId: module.id,
   selector: 'my-dashboard',
   templateUrl: `./dashboard.component.html`
 })
