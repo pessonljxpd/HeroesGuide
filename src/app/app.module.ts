@@ -7,7 +7,7 @@ import {HeroDetailComponent} from './hero-detail.component';
 import {HeroesComponent} from './heroes.component';
 import {HeroService} from './hero.service';
 import {RouterModule} from '@angular/router';
-import {DashboardComponent} from "./dashboard.component";
+import {DashboardComponent} from './dashboard.component';
 
 @NgModule({
   imports: [
@@ -16,7 +16,7 @@ import {DashboardComponent} from "./dashboard.component";
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: '/dashboard',
+        redirectTo: '/heroes',
         pathMatch: 'full'
       },
       {
@@ -34,8 +34,8 @@ import {DashboardComponent} from "./dashboard.component";
     ])
   ],
   declarations: [AppComponent, DashboardComponent, HeroesComponent, HeroDetailComponent],
-  bootstrap: [AppComponent],
-  providers: [HeroService]
+  providers: [HeroService],
+  bootstrap: [AppComponent]
 })
 
 export class AppModule {

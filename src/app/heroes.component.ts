@@ -8,7 +8,7 @@ import {Hero} from './hero';
 @Component({
   selector: 'my-heroes',
   template: `
-    <h2>My heroes</h2>
+    <h2>My heroes1</h2>
     <ul class="heroes">
       <li *ngFor="let hero of heroes" (click)="onSelected(hero)" [class.selected]="hero===selectedHero">
         <span class="badge">{{hero.id}}</span>{{hero.name}}
