@@ -7,8 +7,9 @@ import {HeroService} from './hero.service';
 import {Hero} from './hero';
 
 @Component({
+  moduleId: module.id,
   selector: 'my-heroes',
-  templateUrl: `./heroes.component.html`,
+  templateUrl: `heroes.component.html`,
   styles: [`
     .selected {
       background-color: #CFD8DC !important;
