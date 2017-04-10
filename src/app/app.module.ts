@@ -8,13 +8,13 @@ import {HeroDetailComponent} from './hero-detail.component';
 import {HeroesComponent} from './heroes.component';
 import {HeroService} from './hero.service';
 import {DashboardComponent} from './dashboard.component';
-import {routes} from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   declarations: [AppComponent, DashboardComponent, HeroesComponent, HeroDetailComponent],
   providers: [HeroService],
