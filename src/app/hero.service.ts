@@ -28,6 +28,21 @@ export class HeroService {
       .catch(this.handleErro);
   }
 
+  create(heroName: string): Promise<Hero> {
+    return this.http.post(this.heroesUrl, JSON.stringify({name: heroName}), {headers: this.headers})
+      .toPromise()
+      .then(response => response.json().data)
+      .catch(this.handleErro);
+  }
+
+  delete(id: number) {
+    const url = `${this.heroesUrl}/${id}`;
+    return this.http.delete(url, {headers: this.headers})
+      .toPromise()
+      .then(() => null)
+      .catch(this.handleErro);
+  }
+
   update(hero: Hero): Promise<Hero> {
     const url = `${this.heroesUrl}/${hero.id}`;
     return this.http.put(url, JSON.stringify(hero), {headers: this.headers})
